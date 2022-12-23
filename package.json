@@ -1,0 +1,17 @@
+{
+  "name": "riskanalysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prof": "node --prof --no-logfile-per-isolate index.js && node --prof-process v8.log > v8log.txt",
+    "flamegraph": "node --prof --no-logfile-per-isolate index.js && node --prof-process --preprocess -j v8.log | flamebearer"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sorted-array": "^2.0.4",
+    "sorted-array-functions": "^1.3.0"
+  }
+}
